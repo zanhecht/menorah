@@ -9,7 +9,7 @@
 
 ## Programming
 
-Programming the chips can be done either using an Arduino as an ISP programmer or using a USBTinyISP. The latter can be a little more complicated as WinAVR is not supported on modern (i.e. Windows 7 and up) operating systems.
+Programming the chips can be done either using an Arduino as an ISP programmer or using a USBTinyISP. See https://www.evilmadscientist.com/2007/using-avr-microcontrollers-minimalist-target-boards/ for basic instructions on using the latter, although it is slightly more complicated WinAVR is not supported on modern 64-bit operating systems.
 
 Instead, to use a USBTinyISP, install the following:
 
@@ -18,7 +18,7 @@ Instead, to use a USBTinyISP, install the following:
   * Unzip the archive and copy the folder inside the archive to `C:\Program Files` (i.e. your files should end up in `C:\Program Files\avr8-gnu-toolchain-win32_x86_64`)
 * _GNUWin32 Make_ from https://gnuwin32.sourceforge.net/downlinks/make.php
   * Install in default location (i.e. `C:\Program Files (x86)\GnuWin32`)
-* _AVRDUDE for Windows_ from https://github.com/mariusgreuel/avrdude/releases.
+* _AVRDUDE for Windows_ from https://github.com/mariusgreuel/avrdude/releases
   * Download the file ending in `windows-x64.zip`
   * Unzip the archive and copy the folder inside the archive to `C:\Program Files` (i.e. your files should end up in `C:\Program Files\avrdude`)
 * _Zadig_ from http://zadig.akeo.ie/
