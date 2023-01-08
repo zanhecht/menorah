@@ -29,13 +29,11 @@ uint16_t eepromWord __attribute__((section(".eeprom")));
 
 int main (void)
 	{
-	uint8_t m,n;		//8-bit unsigned integers
-	uint8_t PB, PD;
+	uint8_t PB, PD;		//8-bit unsigned integers
 	uint8_t PortBData[9] = {8U,9U,11U,15U,31U,63U,127U,255U,0};	//uint8_t multiplexed;
 	uint8_t PortDData[9] = {64U,64U,64U,64U,64U,64U,64U,64U,0};
 
-	unsigned int day, daycopy,  j;				//16-bit unsigned integers
-	unsigned short i;				
+	unsigned int day, daycopy,  j;				//16-bit unsigned integers			
 
 	//Initialization routine: Clear watchdog timer-- this can prevent several things from going wrong.		
 	MCUSR &= 0xF7;		//Clear WDRF Flag
@@ -95,8 +93,6 @@ int main (void)
 	PORTB = 0;
 	PORTD = 0;
 
-	i = 0;
-
 	for (;;)  // main loop
 
 		{
@@ -120,7 +116,6 @@ int main (void)
 			//Multiplexing routine: Each LED is on (1/9) of the time. 
 			//  -> Uses much less power.
 			
-			m = 6;
 			PORTD = PD & (64U);
 			shortdelay();
 			PORTD = 0;
